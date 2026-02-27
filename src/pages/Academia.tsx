@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Users, Brain, Target, BarChart3, Code, Cloud, Shield, Database, Monitor, Cpu, ChevronRight } from "lucide-react";
+import { ArrowRight, Brain, Code, Cloud, Shield, Database, Monitor, Cpu } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import SectionHeader from "@/components/shared/SectionHeader";
+import VideoHero from "@/components/shared/VideoHero";
+import academiaVideo from "@/assets/videos/academia-hero.mp4";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const roleTracks = [
   { icon: Brain, title: "AI Engineer", skills: "Python, TensorFlow, MLOps, NLP" },
@@ -35,25 +38,28 @@ const AcademiaPage = () => {
       <Helmet>
         <title>Academia - Role-Ready Training | SOXIT</title>
         <meta name="description" content="SOXIT Academia engineers role-ready professionals through AI-driven competency mapping, skill gap analysis, and real-time performance validation." />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "EducationalOrganization",
+          "name": "SOXIT Academia",
+          "description": "Career-focused skilling programs aligned to real industry demand.",
+          "url": "https://soxit.in/academia"
+        })}</script>
       </Helmet>
 
-      {/* Hero */}
-      <section className="bg-academia pt-32 pb-20 md:pt-40 md:pb-28 px-6">
-        <div className="max-w-5xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-academia-accent mb-4 block">Academia</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-academia-foreground leading-tight max-w-3xl">
-              Aligning Education to Hiring Roles.
-            </h1>
-            <p className="mt-6 text-lg text-academia-foreground/70 max-w-2xl leading-relaxed">
-              We do not teach courses. We engineer role-ready professionals through AI-driven competency mapping and industry-aligned training.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <VideoHero
+        videoSrc={academiaVideo}
+        fallbackImage={heroBg}
+        label="Academia"
+        headline="Transforming Talent into Industry-Ready Professionals"
+        subtext="Career-focused skilling programs aligned to real industry demand."
+        ctaText="View Programs"
+        ctaLink="#programs"
+        overlayClass="bg-academia/70"
+      />
 
       {/* Role Alignment Model */}
-      <section className="section-enterprise section-light">
+      <section id="programs" className="section-enterprise section-light">
         <SectionHeader label="Our Model" title="Role-to-Skill Mapping Engine" description="A systematic approach to bridging the gap between education and employment." />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {alignmentSteps.map((s, i) => (

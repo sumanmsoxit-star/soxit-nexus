@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Shield, Cloud, Brain, Lock, Workflow, Server, ChevronRight } from "lucide-react";
+import { ArrowRight, Shield, Cloud, Brain, Lock, Workflow, Server } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import SectionHeader from "@/components/shared/SectionHeader";
+import VideoHero from "@/components/shared/VideoHero";
+import consultingVideo from "@/assets/videos/consulting-hero.mp4";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const frameworks = ["ITIL", "NIST", "ISO 27001", "TOGAF", "DevSecOps", "Zero Trust"];
 
@@ -37,22 +40,24 @@ const ConsultingPage = () => {
       <Helmet>
         <title>Consulting Services | SOXIT - Enterprise Technology Advisory</title>
         <meta name="description" content="SOXIT Consulting delivers AI-augmented enterprise technology advisory across cloud, cybersecurity, digital transformation, and ERP solutions." />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          "name": "SOXIT Consulting Services",
+          "description": "AI-driven consulting, digital transformation, and enterprise-grade IT solutions.",
+          "url": "https://soxit.in/consulting"
+        })}</script>
       </Helmet>
 
-      {/* Hero */}
-      <section className="bg-primary pt-32 pb-20 md:pt-40 md:pb-28 px-6">
-        <div className="max-w-5xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-consulting-accent mb-4 block">Consulting</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight max-w-3xl">
-              AI-Augmented Enterprise Advisory
-            </h1>
-            <p className="mt-6 text-lg text-primary-foreground/70 max-w-2xl leading-relaxed">
-              We integrate artificial intelligence into established enterprise frameworks to deliver measurable transformation across every layer of your organization.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <VideoHero
+        videoSrc={consultingVideo}
+        fallbackImage={heroBg}
+        label="Consulting"
+        headline="Solving Industry Challenges with Intelligent Technology"
+        subtext="AI-driven consulting, digital transformation, and enterprise-grade IT solutions."
+        ctaText="Explore Consulting Solutions"
+        ctaLink="#services"
+      />
 
       {/* Frameworks */}
       <section className="section-enterprise section-light">
@@ -69,7 +74,7 @@ const ConsultingPage = () => {
       </section>
 
       {/* Service Pillars */}
-      <section className="section-enterprise section-sunken">
+      <section id="services" className="section-enterprise section-sunken">
         <SectionHeader label="Service Pillars" title="What We Deliver" description="Six core service pillars, each enhanced with AI capabilities." />
         <div className="grid-enterprise max-w-7xl mx-auto">
           {services.map((s, i) => (

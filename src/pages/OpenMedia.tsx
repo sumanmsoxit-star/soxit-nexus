@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Video, Palette, BarChart3, Building, Wand2, Mic, Eye, TrendingUp } from "lucide-react";
+import { ArrowRight, Video, Palette, BarChart3, Wand2, Mic, Eye, TrendingUp } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import SectionHeader from "@/components/shared/SectionHeader";
+import VideoHero from "@/components/shared/VideoHero";
+import openmediaVideo from "@/assets/videos/openmedia-hero.mp4";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const capabilities = [
   { icon: Wand2, title: "AI Text / Video / Audio", desc: "Generative content production at scale with AI-powered creative tools." },
@@ -32,25 +35,28 @@ const OpenMediaPage = () => {
       <Helmet>
         <title>Open Media - AI Creative Production | SOXIT</title>
         <meta name="description" content="SOXIT Open Media combines AI-powered creative production, brand strategy, and intelligent media infrastructure for next-generation content." />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "SOXIT OpenMedia",
+          "description": "Co-working spaces and production studios for creators and innovators.",
+          "url": "https://soxit.in/open-media"
+        })}</script>
       </Helmet>
 
-      {/* Hero */}
-      <section className="bg-media pt-32 pb-20 md:pt-40 md:pb-28 px-6">
-        <div className="max-w-5xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-media-accent mb-4 block">Open Media</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-media-foreground leading-tight max-w-3xl">
-              Where Creativity Meets Intelligence.
-            </h1>
-            <p className="mt-6 text-lg text-media-foreground/70 max-w-2xl leading-relaxed">
-              AI-powered content production, brand strategy, and intelligent media infrastructure for the modern enterprise.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <VideoHero
+        videoSrc={openmediaVideo}
+        fallbackImage={heroBg}
+        label="OpenMedia"
+        headline="Where Creativity Meets Infrastructure"
+        subtext="Co-working spaces and production studios for creators and innovators."
+        ctaText="Explore OpenMedia"
+        ctaLink="#capabilities"
+        overlayClass="bg-media/70"
+      />
 
       {/* AI Creative Production */}
-      <section className="section-enterprise section-light">
+      <section id="capabilities" className="section-enterprise section-light">
         <SectionHeader label="Capabilities" title="AI Creative Production" description="End-to-end creative production enhanced by artificial intelligence." />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {capabilities.map((c, i) => (

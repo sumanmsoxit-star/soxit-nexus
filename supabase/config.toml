@@ -1,1 +1,4 @@
 project_id = "nrqfheialxchrvzvfmxv"
+
+[functions.ai-screen-resume]
+verify_jwt = false

@@ -17,7 +17,7 @@ const Footer = () => {
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-md hover:bg-surface-dark-foreground/10 transition-colors" aria-label="LinkedIn">
                 <Linkedin size={18} />
               </a>
-              <a href="mailto:info@soxit.com" className="p-2 rounded-md hover:bg-surface-dark-foreground/10 transition-colors" aria-label="Email">
+              <a href="mailto:consult@soxit.in" className="p-2 rounded-md hover:bg-surface-dark-foreground/10 transition-colors" aria-label="Email">
                 <Mail size={18} />
               </a>
             </div>
@@ -51,15 +51,15 @@ const Footer = () => {
             <div className="flex flex-col gap-3 text-sm">
               <div className="flex items-start gap-2">
                 <MapPin size={16} className="mt-0.5 shrink-0 text-consulting-accent" />
-                <span>Hyderabad, Telangana, India</span>
+                <span>No: 23-3B/234 & 252, Vasavi Pharma Market Complex,<br />Gollapudi, Vijayawada, Andhra Pradesh 521225</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone size={16} className="shrink-0 text-consulting-accent" />
-                <span>+91 XXX XXX XXXX</span>
+                <a href="tel:+919603544647" className="hover:text-consulting-accent transition-colors">+91 96035 44647</a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={16} className="shrink-0 text-consulting-accent" />
-                <span>info@soxit.com</span>
+                <a href="mailto:consult@soxit.in" className="hover:text-consulting-accent transition-colors">consult@soxit.in</a>
               </div>
             </div>
           </div>

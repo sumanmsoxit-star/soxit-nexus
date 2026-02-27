@@ -86,15 +86,15 @@ const ContactPage = () => {
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <MapPin size={18} className="text-consulting-accent mt-0.5 shrink-0" />
-                  <div className="text-sm text-muted-foreground">Hyderabad, Telangana,<br />India</div>
+                  <div className="text-sm text-muted-foreground">No: 23-3B/234 & 252,<br />Vasavi Pharma Market Complex,<br />Gollapudi, Vijayawada,<br />Andhra Pradesh 521225</div>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail size={18} className="text-consulting-accent shrink-0" />
-                  <span className="text-sm text-muted-foreground">info@soxit.com</span>
+                  <a href="mailto:consult@soxit.in" className="text-sm text-muted-foreground hover:text-consulting-accent transition-colors">consult@soxit.in</a>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone size={18} className="text-consulting-accent shrink-0" />
-                  <span className="text-sm text-muted-foreground">+91 XXX XXX XXXX</span>
+                  <a href="tel:+919603544647" className="text-sm text-muted-foreground hover:text-consulting-accent transition-colors">+91 96035 44647</a>
                 </div>
               </div>
             </div>

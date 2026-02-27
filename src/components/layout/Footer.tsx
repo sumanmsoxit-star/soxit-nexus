@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import logoFull from "@/assets/logo-full.png";
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold">SOXIT</h3>
+            <img src={logoFull} alt="SOXIT" className="h-8 w-auto brightness-0 invert" />
             <p className="text-sm text-surface-dark-foreground/60 leading-relaxed">
               Building Trust. Delivering Quality.<br />
               AI-Integrated Consulting, Talent Engineering, and Intelligent Media Enterprise.

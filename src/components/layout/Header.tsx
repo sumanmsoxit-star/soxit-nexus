@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoFull from "@/assets/logo-full.png";
+import logoIcon from "@/assets/logo-icon.png";
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -41,12 +43,8 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <span className={`text-xl md:text-2xl font-bold tracking-tight transition-colors ${scrolled ? 'text-foreground' : 'text-primary-foreground'}`}>
-            SOXIT
-          </span>
-          <span className={`hidden md:inline text-xs font-medium tracking-widest uppercase transition-colors ${scrolled ? 'text-muted-foreground' : 'text-primary-foreground/70'}`}>
-            Consulting Services
-          </span>
+          <img src={logoIcon} alt="SOXIT" className="h-8 md:h-10 w-auto" />
+          <img src={logoFull} alt="SOXIT Consulting Services" className="hidden md:block h-6 md:h-8 w-auto" />
         </Link>
 
         {/* Desktop Nav */}

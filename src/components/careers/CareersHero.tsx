@@ -10,7 +10,7 @@ const CareersHero = () => {
   return (
     <section className="relative bg-primary pt-32 pb-20 md:pt-40 md:pb-28 px-6 overflow-hidden">
       {/* Animated gradient overlay */}
-      <div className="absolute inset-0 opacity-30">
+      <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-gradient-to-br from-consulting-accent/20 via-transparent to-academia/10 animate-pulse" style={{ animationDuration: "6s" }} />
         <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-consulting-accent/5 blur-3xl" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-academia/5 blur-3xl" />
@@ -32,12 +32,12 @@ const CareersHero = () => {
             Careers at SOXIT
           </span>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight max-w-4xl">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-4xl">
             Build the Future of AI, Cloud &amp; Cybersecurity with{" "}
             <span className="text-consulting-accent">SOXIT.</span>
           </h1>
 
-          <p className="mt-6 text-lg text-primary-foreground/70 max-w-2xl leading-relaxed">
+          <p className="mt-6 text-lg text-white/70 max-w-2xl leading-relaxed">
             We are hiring across AI, Data, Cybersecurity, Cloud, Engineering and Digital Transformation domains aligned to global capability center (GCC) demand.
           </p>
 
@@ -53,7 +53,7 @@ const CareersHero = () => {
               asChild
               size="lg"
               variant="outline"
-              className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10"
+              className="border-white/20 text-white hover:bg-white/10"
             >
               <a href="#open-positions">
                 <Send size={16} className="mr-2" /> Apply Now
@@ -62,7 +62,7 @@ const CareersHero = () => {
           </div>
 
           {/* Stats strip */}
-          <div className="flex flex-wrap gap-8 mt-12 pt-8 border-t border-primary-foreground/10">
+          <div className="flex flex-wrap gap-8 mt-12 pt-8 border-t border-white/10">
             {[
               { value: "5+", label: "Domains" },
               { value: "30+", label: "Open Roles" },
@@ -71,7 +71,7 @@ const CareersHero = () => {
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="text-2xl font-bold text-consulting-accent">{stat.value}</p>
-                <p className="text-xs text-primary-foreground/50 uppercase tracking-wider">{stat.label}</p>
+                <p className="text-xs text-white/50 uppercase tracking-wider">{stat.label}</p>
               </div>
             ))}
           </div>

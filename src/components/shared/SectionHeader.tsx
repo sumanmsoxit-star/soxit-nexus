@@ -6,9 +6,10 @@ interface SectionHeaderProps {
   description?: string;
   align?: "left" | "center";
   light?: boolean;
+  accentClass?: string;
 }
 
-const SectionHeader = ({ label, title, description, align = "center", light = false }: SectionHeaderProps) => {
+const SectionHeader = ({ label, title, description, align = "center", light = false, accentClass = "text-consulting-accent" }: SectionHeaderProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -18,7 +19,7 @@ const SectionHeader = ({ label, title, description, align = "center", light = fa
       className={`mb-12 md:mb-16 ${align === "center" ? "text-center max-w-3xl mx-auto" : "max-w-2xl"}`}
     >
       {label && (
-        <span className={`text-xs font-semibold uppercase tracking-[0.2em] mb-3 block ${light ? "text-consulting-accent" : "text-consulting-accent"}`}>
+        <span className={`text-xs font-semibold uppercase tracking-[0.2em] mb-3 block ${accentClass}`}>
           {label}
         </span>
       )}

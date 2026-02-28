@@ -52,7 +52,7 @@ const JobCard = ({ job, index }: JobCardProps) => {
               </Badge>
               <Badge
                 variant={job.status === "open" ? "default" : "secondary"}
-                className={job.status === "open" ? "bg-green-500/10 text-green-600 border-green-500/20 text-[10px]" : "bg-red-500/10 text-red-500 border-red-500/20 text-[10px]"}
+                className={job.status === "open" ? "bg-academia/10 text-academia border-academia/20 text-[10px]" : "bg-destructive/10 text-destructive border-destructive/20 text-[10px]"}
               >
                 {job.status === "open" ? "Open" : "Closed"}
               </Badge>
@@ -131,7 +131,7 @@ const JobCard = ({ job, index }: JobCardProps) => {
                     </Link>
                   </Button>
                   {job.status === "open" && (
-                    <Button asChild size="sm" variant="outline" className="gap-1.5">
+                    <Button asChild size="sm" variant="outline" className="gap-1.5 border-consulting-accent text-consulting-accent hover:bg-consulting-accent/10">
                       <Link to={`/careers/apply/${job.job_post_id.toLowerCase()}`}>
                         Apply Now
                       </Link>

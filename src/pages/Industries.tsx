@@ -32,10 +32,10 @@ const IndustriesPage = () => {
         <div className="max-w-5xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-consulting-accent mb-4 block">Industries</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight max-w-3xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-3xl">
               Driving Impact Across Sectors
             </h1>
-            <p className="mt-6 text-lg text-primary-foreground/70 max-w-2xl">
+            <p className="mt-6 text-lg text-white/70 max-w-2xl">
               Domain-specific AI solutions for the world's most critical industries.
             </p>
           </motion.div>

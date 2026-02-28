@@ -31,10 +31,10 @@ const AboutPage = () => {
         <div className="max-w-5xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-consulting-accent mb-4 block">About</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight max-w-3xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-3xl">
               Building Trust. Delivering Quality.
             </h1>
-            <p className="mt-6 text-lg text-primary-foreground/70 max-w-2xl leading-relaxed">
+            <p className="mt-6 text-lg text-white/70 max-w-2xl leading-relaxed">
               SOXIT Consulting Services is an AI-integrated enterprise operating across consulting, education, and media — united by a single mission: measurable impact.
             </p>
           </motion.div>
@@ -82,15 +82,15 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-consulting-accent">
+      <section className="py-20 px-6 gradient-consulting">
         <motion.div {...fadeInUp} className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-consulting-accent-foreground mb-4">Join Our Journey</h2>
-          <p className="text-consulting-accent-foreground/70 mb-8">Be part of India's next great technology enterprise.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Join Our Journey</h2>
+          <p className="text-white/70 mb-8">Be part of India's next great technology enterprise.</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/careers" className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
+            <Link to="/careers" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
               View Careers <ArrowRight size={16} />
             </Link>
-            <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-consulting-accent-foreground/30 text-consulting-accent-foreground font-semibold text-sm hover:bg-consulting-accent-foreground/10 transition-colors">
+            <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/30 text-white font-semibold text-sm hover:bg-white/10 transition-colors">
               Contact Us <ArrowRight size={16} />
             </Link>
           </div>

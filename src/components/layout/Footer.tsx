@@ -11,15 +11,14 @@ const Footer = () => {
           <div className="space-y-4">
             <img src={logoFull} alt="SOXIT" className="h-8 w-auto brightness-0 invert" />
             <p className="text-sm text-surface-dark-foreground/60 leading-relaxed">Building Trust. Delivering Quality.
-
               <br />
               AI-Integrated Consulting, Talent Engineering, and Intelligent Media Enterprise.
             </p>
             <div className="flex items-center gap-3 pt-2">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-md hover:bg-surface-dark-foreground/10 transition-colors" aria-label="LinkedIn">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg hover:bg-surface-dark-foreground/10 transition-colors" aria-label="LinkedIn">
                 <Linkedin size={18} />
               </a>
-              <a href="mailto:consult@soxit.in" className="p-2 rounded-md hover:bg-surface-dark-foreground/10 transition-colors" aria-label="Email">
+              <a href="mailto:consult@soxit.in" className="p-2 rounded-lg hover:bg-surface-dark-foreground/10 transition-colors" aria-label="Email">
                 <Mail size={18} />
               </a>
             </div>
@@ -30,8 +29,8 @@ const Footer = () => {
             <h4 className="text-sm font-semibold uppercase tracking-wider text-surface-dark-foreground/40">Divisions</h4>
             <nav className="flex flex-col gap-2">
               <Link to="/consulting" className="text-sm hover:text-consulting-accent transition-colors">Consulting</Link>
-              <Link to="/academia" className="text-sm hover:text-consulting-accent transition-colors">Academia</Link>
-              <Link to="/open-media" className="text-sm hover:text-consulting-accent transition-colors">Open Media</Link>
+              <Link to="/academia" className="text-sm hover:text-academia transition-colors">Academia</Link>
+              <Link to="/open-media" className="text-sm hover:text-media-accent transition-colors">Open Media</Link>
               <Link to="/industries" className="text-sm hover:text-consulting-accent transition-colors">Industries</Link>
             </nav>
           </div>
@@ -76,7 +75,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>);
+    </footer>
+  );
 };
 
 export default Footer;

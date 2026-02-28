@@ -6,63 +6,72 @@
 
 @layer base {
   :root {
-    /* === BASE BRAND === */
-    --background: 220 20% 97%;
-    --foreground: 220 30% 10%;
+    /* === GLOBAL BRAND FOUNDATION === */
+    --background: 213 28% 97%;         /* #F8FAFC */
+    --foreground: 220 17% 17%;         /* #1F2937 */
 
     --card: 0 0% 100%;
-    --card-foreground: 220 30% 10%;
+    --card-foreground: 220 17% 17%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 10%;
+    --popover-foreground: 220 17% 17%;
 
-    /* Navy primary */
-    --primary: 218 60% 12%;
+    /* Primary Brand Base — Deep Navy */
+    --primary: 215 69% 14%;            /* #0B1F3B */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 220 15% 94%;
-    --secondary-foreground: 220 30% 10%;
+    --secondary: 216 24% 95%;          /* #EEF2F7 */
+    --secondary-foreground: 220 17% 17%;
 
-    --muted: 220 15% 94%;
-    --muted-foreground: 220 10% 46%;
+    --muted: 216 24% 95%;
+    --muted-foreground: 218 11% 34%;   /* #4B5563 */
 
-    --accent: 220 15% 90%;
-    --accent-foreground: 220 30% 10%;
+    --accent: 216 24% 95%;
+    --accent-foreground: 220 17% 17%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 218 60% 12%;
+    --border: 220 13% 83%;             /* #D1D5DB */
+    --input: 220 13% 83%;
+    --ring: 215 69% 14%;
     --radius: 0.5rem;
 
-    /* === DIVISION COLORS === */
-    /* Consulting: Deep Blue + Electric Cyan */
-    --consulting: 218 60% 12%;
+    /* === DIVISION ACCENT COLORS === */
+    /* Consulting — Orange Accent System */
+    --consulting: 215 69% 14%;
     --consulting-foreground: 210 40% 98%;
-    --consulting-accent: 188 100% 42%;
-    --consulting-accent-foreground: 218 60% 8%;
+    --consulting-accent: 18 89% 53%;       /* #F26419 */
+    --consulting-accent-foreground: 0 0% 100%;
+    --consulting-accent-dark: 18 87% 42%;  /* #C94C0E */
+    --consulting-accent-light: 24 100% 91%;/* #FFE6D5 */
+    --consulting-accent-hover: 20 100% 60%;/* #FF7A33 */
 
-    /* Academia: Royal Purple + Teal */
-    --academia: 271 76% 40%;
+    /* Academia — Green Accent System */
+    --academia: 158 75% 38%;               /* #1CA77A */
     --academia-foreground: 0 0% 100%;
-    --academia-accent: 174 60% 40%;
+    --academia-accent: 158 75% 38%;
     --academia-accent-foreground: 0 0% 100%;
+    --academia-dark: 162 71% 28%;          /* #147A5A */
+    --academia-light: 160 56% 93%;         /* #E6F6F1 */
+    --academia-hover: 155 69% 44%;         /* #22C08A */
 
-    /* Open Media: Charcoal + Neon Orange */
-    --media: 240 20% 14%;
+    /* OpenMedia — Yellow Accent System */
+    --media: 215 69% 14%;
     --media-foreground: 0 0% 100%;
-    --media-accent: 25 100% 50%;
-    --media-accent-foreground: 0 0% 100%;
+    --media-accent: 44 92% 48%;            /* #F2B705 */
+    --media-accent-foreground: 220 17% 17%;/* Dark text on yellow */
+    --media-accent-dark: 44 95% 40%;       /* #C99604 */
+    --media-accent-light: 48 100% 90%;     /* #FFF4CC */
+    --media-accent-hover: 42 100% 60%;     /* #FFC933 */
 
     /* === SURFACES === */
     --surface-elevated: 0 0% 100%;
-    --surface-sunken: 220 20% 95%;
-    --surface-dark: 220 30% 8%;
-    --surface-dark-foreground: 220 15% 90%;
+    --surface-sunken: 216 24% 95%;         /* #EEF2F7 */
+    --surface-dark: 216 67% 10%;           /* #07152A */
+    --surface-dark-foreground: 220 14% 90%;/* #E5E7EB */
 
-    /* Sidebar (keep for shadcn) */
+    /* Sidebar */
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -74,25 +83,25 @@
   }
 
   .dark {
-    --background: 220 30% 6%;
-    --foreground: 220 15% 90%;
-    --card: 220 25% 10%;
-    --card-foreground: 220 15% 90%;
-    --popover: 220 25% 10%;
-    --popover-foreground: 220 15% 90%;
-    --primary: 188 100% 42%;
-    --primary-foreground: 220 30% 6%;
-    --secondary: 220 20% 16%;
-    --secondary-foreground: 220 15% 90%;
-    --muted: 220 20% 16%;
-    --muted-foreground: 220 10% 55%;
-    --accent: 220 20% 16%;
-    --accent-foreground: 220 15% 90%;
+    --background: 216 67% 5%;
+    --foreground: 220 14% 90%;
+    --card: 216 50% 8%;
+    --card-foreground: 220 14% 90%;
+    --popover: 216 50% 8%;
+    --popover-foreground: 220 14% 90%;
+    --primary: 18 89% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 216 30% 14%;
+    --secondary-foreground: 220 14% 90%;
+    --muted: 216 30% 14%;
+    --muted-foreground: 218 11% 55%;
+    --accent: 216 30% 14%;
+    --accent-foreground: 220 14% 90%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 220 20% 18%;
-    --input: 220 20% 18%;
-    --ring: 188 100% 42%;
+    --border: 216 30% 18%;
+    --input: 216 30% 18%;
+    --ring: 18 89% 53%;
   }
 }
 
@@ -111,17 +120,17 @@
 }
 
 @layer components {
-  /* === ENTERPRISE BUTTON VARIANTS (used via className utility) === */
+  /* === DIVISION BUTTON VARIANTS === */
   .btn-consulting {
-    @apply bg-consulting-accent text-consulting-accent-foreground hover:opacity-90 transition-all duration-200;
+    @apply bg-consulting-accent text-white hover:brightness-110 transition-all duration-200 shadow-sm;
   }
 
   .btn-academia {
-    @apply bg-academia text-academia-foreground hover:opacity-90 transition-all duration-200;
+    @apply bg-academia text-academia-foreground hover:brightness-110 transition-all duration-200 shadow-sm;
   }
 
   .btn-media {
-    @apply bg-media-accent text-media-accent-foreground hover:opacity-90 transition-all duration-200;
+    @apply bg-media-accent text-media-accent-foreground hover:brightness-110 transition-all duration-200 shadow-sm;
   }
 
   /* === SECTION PATTERNS === */
@@ -146,7 +155,7 @@
     @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
   }
 
-  /* === ANIMATED UNDERLINE NAV === */
+  /* === NAV LINK === */
   .nav-link {
     @apply relative text-sm font-medium tracking-wide uppercase transition-colors duration-200;
   }
@@ -161,20 +170,12 @@
     @apply scale-x-100 origin-left;
   }
 
-  /* === CIRCUIT LINE ANIMATION === */
-  .circuit-bg {
-    background-image: 
-      radial-gradient(circle at 20% 50%, hsl(188 100% 42% / 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(271 76% 40% / 0.03) 0%, transparent 50%),
-      radial-gradient(circle at 60% 80%, hsl(25 100% 50% / 0.03) 0%, transparent 50%);
-  }
-
   /* === METRIC CARD === */
   .metric-card {
     @apply relative overflow-hidden rounded-lg border border-border bg-card p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
   }
 
-  /* === DIVISION PANEL === */
+  /* === DIVISION PANELS === */
   .division-panel {
     @apply relative overflow-hidden rounded-xl p-8 md:p-10 transition-all duration-500 hover:shadow-2xl;
   }
@@ -188,12 +189,23 @@
   }
 
   .division-panel-media {
-    @apply bg-media text-media-foreground;
+    @apply bg-surface-dark text-surface-dark-foreground;
   }
 }
 
 @layer utilities {
   .text-gradient-brand {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-consulting-accent via-academia to-media-accent;
+  }
+
+  /* Division gradients — strict 135deg linear only */
+  .gradient-consulting {
+    background: linear-gradient(135deg, hsl(18 89% 53%), hsl(18 87% 42%));
+  }
+  .gradient-academia {
+    background: linear-gradient(135deg, hsl(158 75% 38%), hsl(162 71% 28%));
+  }
+  .gradient-media {
+    background: linear-gradient(135deg, hsl(44 92% 48%), hsl(44 95% 40%));
   }
 }

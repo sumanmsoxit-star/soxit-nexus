@@ -57,6 +57,8 @@ const ConsultingPage = () => {
         subtext="AI-driven consulting, digital transformation, and enterprise-grade IT solutions."
         ctaText="Explore Consulting Solutions"
         ctaLink="#services"
+        accentClass="text-consulting-accent"
+        ctaClass="btn-consulting"
       />
 
       {/* Frameworks */}
@@ -108,11 +110,11 @@ const ConsultingPage = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-consulting-accent">
+      <section className="py-20 px-6 gradient-consulting">
         <motion.div {...fadeInUp} className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-consulting-accent-foreground mb-4">Transform Your Enterprise</h2>
-          <p className="text-consulting-accent-foreground/70 mb-8">Schedule a strategic consultation with our AI-integrated advisory team.</p>
-          <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Transform Your Enterprise</h2>
+          <p className="text-white/70 mb-8">Schedule a strategic consultation with our AI-integrated advisory team.</p>
+          <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
             Schedule Consultation <ArrowRight size={16} />
           </Link>
         </motion.div>

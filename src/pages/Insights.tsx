@@ -33,7 +33,7 @@ const InsightsPage = () => {
         <div className="max-w-5xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-consulting-accent mb-4 block">Insights</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight max-w-3xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-3xl">
               Perspectives on Technology & Innovation
             </h1>
           </motion.div>

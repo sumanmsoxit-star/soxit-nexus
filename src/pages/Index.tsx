@@ -17,6 +17,7 @@ const divisions = [
     cta: "Explore Consulting",
     panelClass: "division-panel-consulting",
     icon: Shield,
+    accentClass: "text-consulting-accent",
   },
   {
     title: "Academia",
@@ -27,6 +28,7 @@ const divisions = [
     cta: "Discover Academia",
     panelClass: "division-panel-academia",
     icon: GraduationCap,
+    accentClass: "text-academia",
   },
   {
     title: "Open Media",
@@ -37,6 +39,7 @@ const divisions = [
     cta: "Experience Open Media",
     panelClass: "division-panel-media",
     icon: Tv,
+    accentClass: "text-media-accent",
   },
 ];
 
@@ -89,11 +92,11 @@ const Index = () => {
             <span className="inline-block text-xs font-semibold uppercase tracking-[0.3em] text-consulting-accent mb-6">
               Building Trust. Delivering Quality.
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-primary-foreground leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight">
               Where Technology, Intelligence,{" "}
               <span className="text-consulting-accent">and Creativity Converge.</span>
             </h1>
-            <p className="mt-6 text-lg md:text-xl text-primary-foreground/70 max-w-2xl mx-auto leading-relaxed">
+            <p className="mt-6 text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
               AI-integrated Consulting, Talent Engineering, and Intelligent Media Infrastructure.
             </p>
           </motion.div>
@@ -103,26 +106,25 @@ const Index = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Link to="/consulting" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md bg-consulting-accent text-consulting-accent-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
+            <Link to="/consulting" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-consulting-accent text-white font-semibold text-sm hover:bg-consulting-accent-hover transition-colors shadow-sm">
               Explore Consulting <ArrowRight size={16} />
             </Link>
-            <Link to="/academia" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md bg-academia text-academia-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
+            <Link to="/academia" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-academia text-academia-foreground font-semibold text-sm hover:bg-academia-hover transition-colors shadow-sm">
               Discover Academia <ArrowRight size={16} />
             </Link>
-            <Link to="/open-media" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md border border-primary-foreground/30 text-primary-foreground font-semibold text-sm hover:bg-primary-foreground/10 transition-colors">
+            <Link to="/open-media" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg border border-white/30 text-white font-semibold text-sm hover:bg-white/10 transition-colors">
               Experience Open Media <ArrowRight size={16} />
             </Link>
           </motion.div>
         </div>
 
-        {/* Scroll indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2"
         >
-          <div className="w-5 h-8 rounded-full border-2 border-primary-foreground/30 flex items-start justify-center p-1">
+          <div className="w-5 h-8 rounded-full border-2 border-white/30 flex items-start justify-center p-1">
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
@@ -241,15 +243,15 @@ const Index = () => {
       </section>
 
       {/* === CTA BANNER === */}
-      <section className="py-20 md:py-28 px-6 bg-consulting-accent">
+      <section className="py-20 md:py-28 px-6 gradient-consulting">
         <motion.div {...fadeInUp} className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-consulting-accent-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Transform Your Enterprise?
           </h2>
-          <p className="text-consulting-accent-foreground/70 mb-8 text-lg">
+          <p className="text-white/70 mb-8 text-lg">
             Schedule a strategic consultation with our AI-integrated advisory team.
           </p>
-          <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
+          <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
             Schedule Consultation <ArrowRight size={16} />
           </Link>
         </motion.div>

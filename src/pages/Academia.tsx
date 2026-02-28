@@ -55,12 +55,14 @@ const AcademiaPage = () => {
         subtext="Career-focused skilling programs aligned to real industry demand."
         ctaText="View Programs"
         ctaLink="#programs"
-        overlayClass="bg-academia/70"
+        overlayClass="bg-academia-dark/70"
+        accentClass="text-academia"
+        ctaClass="btn-academia"
       />
 
       {/* Role Alignment Model */}
       <section id="programs" className="section-enterprise section-light">
-        <SectionHeader label="Our Model" title="Role-to-Skill Mapping Engine" description="A systematic approach to bridging the gap between education and employment." />
+        <SectionHeader label="Our Model" title="Role-to-Skill Mapping Engine" description="A systematic approach to bridging the gap between education and employment." accentClass="text-academia" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {alignmentSteps.map((s, i) => (
             <motion.div key={s.num} {...fadeInUp} transition={{ ...fadeInUp.transition, delay: i * 0.1 }}>
@@ -78,7 +80,7 @@ const AcademiaPage = () => {
 
       {/* Role Tracks */}
       <section className="section-enterprise section-sunken">
-        <SectionHeader label="Role-Ready Tracks" title="Top Career Tracks" description="Each track is designed around actual hiring requirements from top-tier companies." />
+        <SectionHeader label="Role-Ready Tracks" title="Top Career Tracks" description="Each track is designed around actual hiring requirements from top-tier companies." accentClass="text-academia" />
         <div className="grid-enterprise max-w-7xl mx-auto">
           {roleTracks.map((r, i) => (
             <motion.div key={r.title} {...fadeInUp} transition={{ ...fadeInUp.transition, delay: i * 0.08 }}>
@@ -96,7 +98,7 @@ const AcademiaPage = () => {
 
       {/* iSkill Platform */}
       <section className="section-enterprise section-dark">
-        <SectionHeader label="Platform" title="iSkill — AI Learning Platform" description="Virtual labs, interview simulation, and predictive career mapping." light />
+        <SectionHeader label="Platform" title="iSkill — AI Learning Platform" description="Virtual labs, interview simulation, and predictive career mapping." light accentClass="text-academia" />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {[
             { title: "Virtual Labs", desc: "Hands-on cloud-based lab environments with real enterprise tools." },
@@ -104,7 +106,7 @@ const AcademiaPage = () => {
             { title: "Career Mapping", desc: "Predictive analytics for career trajectory and skill demand forecasting." },
           ].map((item, i) => (
             <motion.div key={item.title} {...fadeInUp} transition={{ ...fadeInUp.transition, delay: i * 0.1 }}>
-              <div className="p-6 rounded-xl border border-surface-dark-foreground/10 hover:border-academia-accent/30 transition-colors">
+              <div className="p-6 rounded-xl border border-surface-dark-foreground/10 hover:border-academia/30 transition-colors">
                 <h3 className="font-bold text-surface-dark-foreground mb-2">{item.title}</h3>
                 <p className="text-sm text-surface-dark-foreground/60">{item.desc}</p>
               </div>
@@ -114,14 +116,14 @@ const AcademiaPage = () => {
       </section>
 
       {/* CTAs */}
-      <section className="py-20 px-6 bg-academia">
+      <section className="py-20 px-6 gradient-academia">
         <motion.div {...fadeInUp} className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-academia-foreground mb-6">Start Your Journey</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Start Your Journey</h2>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-academia-accent text-academia-accent-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
+            <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white text-foreground font-semibold text-sm hover:opacity-90 transition-opacity shadow-sm">
               Apply for Internship <ArrowRight size={16} />
             </Link>
-            <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-academia-foreground/30 text-academia-foreground font-semibold text-sm hover:bg-academia-foreground/10 transition-colors">
+            <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/30 text-white font-semibold text-sm hover:bg-white/10 transition-colors">
               Hire From Us <ArrowRight size={16} />
             </Link>
           </div>

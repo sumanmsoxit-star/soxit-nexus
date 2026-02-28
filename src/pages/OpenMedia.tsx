@@ -52,12 +52,14 @@ const OpenMediaPage = () => {
         subtext="Co-working spaces and production studios for creators and innovators."
         ctaText="Explore OpenMedia"
         ctaLink="#capabilities"
-        overlayClass="bg-media/70"
+        overlayClass="bg-primary/70"
+        accentClass="text-media-accent"
+        ctaClass="btn-media"
       />
 
       {/* AI Creative Production */}
       <section id="capabilities" className="section-enterprise section-light">
-        <SectionHeader label="Capabilities" title="AI Creative Production" description="End-to-end creative production enhanced by artificial intelligence." />
+        <SectionHeader label="Capabilities" title="AI Creative Production" description="End-to-end creative production enhanced by artificial intelligence." accentClass="text-media-accent" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {capabilities.map((c, i) => (
             <motion.div key={c.title} {...fadeInUp} transition={{ ...fadeInUp.transition, delay: i * 0.1 }}>
@@ -77,7 +79,7 @@ const OpenMediaPage = () => {
 
       {/* Brand & Strategy */}
       <section className="section-enterprise section-sunken">
-        <SectionHeader label="Strategy" title="Branding & Campaign Intelligence" description="Data-driven branding and marketing strategy powered by AI analytics." />
+        <SectionHeader label="Strategy" title="Branding & Campaign Intelligence" description="Data-driven branding and marketing strategy powered by AI analytics." accentClass="text-media-accent" />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {[
             { icon: BarChart3, title: "Analytics Dashboards", desc: "Real-time campaign performance tracking and audience insights." },
@@ -99,7 +101,7 @@ const OpenMediaPage = () => {
 
       {/* Intelligent Media Park */}
       <section className="section-enterprise section-dark">
-        <SectionHeader label="Infrastructure" title="Intelligent Media Park" description="India's first AI-integrated creative production campus." light />
+        <SectionHeader label="Infrastructure" title="Intelligent Media Park" description="India's first AI-integrated creative production campus." light accentClass="text-media-accent" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {mediaPark.map((m, i) => (
             <motion.div key={m.title} {...fadeInUp} transition={{ ...fadeInUp.transition, delay: i * 0.1 }}>
@@ -113,14 +115,14 @@ const OpenMediaPage = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-media-accent">
+      <section className="py-20 px-6 gradient-media">
         <motion.div {...fadeInUp} className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-media-accent-foreground mb-6">Produce Smarter</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Produce Smarter</h2>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-media text-media-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
+            <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
               Book Studio <ArrowRight size={16} />
             </Link>
-            <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-media-accent-foreground/30 text-media-accent-foreground font-semibold text-sm hover:bg-media-accent-foreground/10 transition-colors">
+            <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-foreground/30 text-foreground font-semibold text-sm hover:bg-foreground/10 transition-colors">
               Partner With Us <ArrowRight size={16} />
             </Link>
           </div>

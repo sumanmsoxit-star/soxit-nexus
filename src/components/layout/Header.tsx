@@ -6,9 +6,9 @@ import logoFull from "@/assets/logo-full.png";
 import logoIcon from "@/assets/logo-icon.png";
 
 const divisions = [
-  { label: "Consulting", path: "/consulting", className: "bg-consulting-accent text-consulting-accent-foreground hover:shadow-lg hover:shadow-consulting-accent/20" },
-  { label: "Academia", path: "/academia", className: "bg-academia text-academia-foreground hover:shadow-lg hover:shadow-academia/20" },
-  { label: "OpenMedia", path: "/open-media", className: "bg-media-accent text-media-accent-foreground hover:shadow-lg hover:shadow-media-accent/20" },
+  { label: "Consulting", path: "/consulting", className: "bg-consulting-accent text-white hover:bg-consulting-accent-hover shadow-sm" },
+  { label: "Academia", path: "/academia", className: "bg-academia text-academia-foreground hover:bg-academia-hover shadow-sm" },
+  { label: "OpenMedia", path: "/open-media", className: "bg-media-accent text-media-accent-foreground hover:bg-media-accent-hover shadow-sm" },
 ];
 
 const secondaryNav = [
@@ -35,7 +35,6 @@ const Header = () => {
     setDrawerOpen(false);
   }, [location.pathname]);
 
-  // Lock body scroll when drawer is open
   useEffect(() => {
     if (drawerOpen) {
       document.body.style.overflow = "hidden";
@@ -45,7 +44,6 @@ const Header = () => {
     return () => { document.body.style.overflow = ""; };
   }, [drawerOpen]);
 
-  // Close on ESC
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setDrawerOpen(false);
@@ -60,7 +58,7 @@ const Header = () => {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
             ? "bg-surface-elevated/95 backdrop-blur-md shadow-sm border-b border-border"
-            : "bg-primary/90 backdrop-blur-sm"
+            : "bg-primary backdrop-blur-sm"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 flex items-center justify-between h-16 md:h-20">
@@ -82,7 +80,7 @@ const Header = () => {
               <Link
                 key={div.path}
                 to={div.path}
-                className={`px-5 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:scale-105 ${div.className} ${
+                className={`px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:scale-105 ${div.className} ${
                   location.pathname === div.path ? "ring-2 ring-offset-2 ring-offset-transparent ring-white/40" : ""
                 }`}
               >
@@ -94,7 +92,7 @@ const Header = () => {
           {/* Hamburger Toggle */}
           <button
             onClick={() => setDrawerOpen(!drawerOpen)}
-            className={`p-2 rounded-md transition-colors ${
+            className={`p-2 rounded-lg transition-colors ${
               scrolled
                 ? "text-foreground hover:bg-accent"
                 : "text-primary-foreground hover:bg-primary-foreground/10"
@@ -111,18 +109,16 @@ const Header = () => {
       <AnimatePresence>
         {drawerOpen && (
           <>
-            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm"
+              className="fixed inset-0 z-[60] bg-foreground/40 backdrop-blur-sm"
               onClick={() => setDrawerOpen(false)}
               aria-hidden="true"
             />
 
-            {/* Drawer Panel */}
             <motion.aside
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
@@ -133,12 +129,11 @@ const Header = () => {
               aria-modal="true"
               aria-label="Navigation menu"
             >
-              {/* Drawer Header */}
               <div className="flex items-center justify-between px-6 h-16 border-b border-border">
                 <span className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Menu</span>
                 <button
                   onClick={() => setDrawerOpen(false)}
-                  className="p-2 rounded-md text-foreground hover:bg-accent transition-colors"
+                  className="p-2 rounded-lg text-foreground hover:bg-accent transition-colors"
                   aria-label="Close menu"
                 >
                   <X size={20} />
@@ -181,7 +176,6 @@ const Header = () => {
                 </ul>
               </nav>
 
-              {/* Drawer Footer */}
               <div className="px-6 py-4 border-t border-border">
                 <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} SOXIT Consulting Services</p>
               </div>

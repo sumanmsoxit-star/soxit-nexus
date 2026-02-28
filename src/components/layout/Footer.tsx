@@ -10,8 +10,9 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <img src={logoFull} alt="SOXIT" className="h-8 w-auto brightness-0 invert" />
-            <p className="text-sm text-surface-dark-foreground/60 leading-relaxed">
-              Building Trust. Delivering Quality.<br />
+            <p className="text-sm text-surface-dark-foreground/60 leading-relaxed">Building Trust. Delivering Quality.
+
+              <br />
               AI-Integrated Consulting, Talent Engineering, and Intelligent Media Enterprise.
             </p>
             <div className="flex items-center gap-3 pt-2">
@@ -75,8 +76,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>);
 };
 
 export default Footer;

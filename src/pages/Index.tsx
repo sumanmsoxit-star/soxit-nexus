@@ -85,18 +85,18 @@ const Index = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroBg} alt="" className="w-full h-full object-cover" aria-hidden="true" />
-          <div className="absolute inset-0 bg-primary/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/80 to-surface-dark/95" />
         </div>
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-20">
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <span className="inline-block text-xs font-semibold uppercase tracking-[0.3em] text-consulting-accent mb-6">
+            <span className="inline-block text-xs font-semibold uppercase tracking-[0.3em] text-consulting-accent mb-6 drop-shadow-sm">
               Building Trust. Delivering Quality.
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-primary-foreground leading-tight drop-shadow-md">
               Where Technology, Intelligence,{" "}
-              <span className="text-consulting-accent">and Creativity Converge.</span>
+              <span className="text-consulting-accent drop-shadow-sm">and Creativity Converge.</span>
             </h1>
-            <p className="mt-6 text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
+            <p className="mt-6 text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto leading-relaxed">
               AI-integrated Consulting, Talent Engineering, and Intelligent Media Infrastructure.
             </p>
           </motion.div>
@@ -106,13 +106,13 @@ const Index = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Link to="/consulting" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-consulting-accent text-white font-semibold text-sm hover:bg-consulting-accent-hover transition-colors shadow-sm">
+            <Link to="/consulting" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-consulting-accent text-white font-semibold text-sm hover:bg-consulting-accent-hover transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5">
               Explore Consulting <ArrowRight size={16} />
             </Link>
-            <Link to="/academia" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-academia text-academia-foreground font-semibold text-sm hover:bg-academia-hover transition-colors shadow-sm">
+            <Link to="/academia" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-academia text-academia-foreground font-semibold text-sm hover:bg-academia-hover transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5">
               Discover Academia <ArrowRight size={16} />
             </Link>
-            <Link to="/open-media" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg border border-white/30 text-white font-semibold text-sm hover:bg-white/10 transition-colors">
+            <Link to="/open-media" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg border-2 border-primary-foreground/40 text-primary-foreground font-semibold text-sm hover:bg-primary-foreground/10 hover:border-primary-foreground/60 transition-all duration-200">
               Experience Open Media <ArrowRight size={16} />
             </Link>
           </motion.div>

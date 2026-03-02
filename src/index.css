@@ -140,6 +140,7 @@
 
   .section-dark {
     @apply bg-surface-dark text-surface-dark-foreground;
+    background-image: linear-gradient(180deg, hsl(216 67% 10%) 0%, hsl(216 67% 8%) 100%);
   }
 
   .section-light {
@@ -148,6 +149,8 @@
 
   .section-sunken {
     @apply bg-surface-sunken text-foreground;
+    border-top: 1px solid hsl(var(--border) / 0.5);
+    border-bottom: 1px solid hsl(var(--border) / 0.5);
   }
 
   /* === GRID PATTERNS === */
@@ -173,6 +176,7 @@
   /* === METRIC CARD === */
   .metric-card {
     @apply relative overflow-hidden rounded-lg border border-border bg-card p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+    box-shadow: 0 1px 3px 0 hsl(var(--foreground) / 0.04);
   }
 
   /* === DIVISION PANELS === */

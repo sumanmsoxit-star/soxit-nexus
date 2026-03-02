@@ -31,6 +31,7 @@ const VideoHero = ({
           <source src={videoSrc} type="video/mp4" />
         </video>
         <div className={`absolute inset-0 ${overlayClass}`} />
+        <div className="absolute inset-0 bg-gradient-to-t from-surface-dark/40 to-transparent" />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-20">
@@ -38,10 +39,10 @@ const VideoHero = ({
           <span className={`inline-block text-xs font-semibold uppercase tracking-[0.3em] ${accentClass} mb-6`}>
             {label}
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight max-w-4xl mx-auto drop-shadow-md">
             {headline}
           </h1>
-          <p className="mt-6 text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-6 text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto leading-relaxed">
             {subtext}
           </p>
         </motion.div>

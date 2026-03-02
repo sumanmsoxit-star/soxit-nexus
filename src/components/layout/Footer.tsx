@@ -4,7 +4,7 @@ import logoFull from "@/assets/logo-full.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-surface-dark text-surface-dark-foreground">
+    <footer className="bg-surface-dark text-surface-dark-foreground border-t border-surface-dark-foreground/5">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}

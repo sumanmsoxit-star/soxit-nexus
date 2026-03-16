@@ -63,7 +63,7 @@ const JobCard = ({ job, index }: JobCardProps) => {
               <span className="flex items-center gap-1"><MapPin size={11} />{job.location}</span>
               <span className="flex items-center gap-1"><Calendar size={11} />{new Date(job.posting_date).toLocaleDateString()}</span>
               {job.experience_range && <span>{job.experience_range}</span>}
-              {job.ctc_range && <span className="flex items-center gap-1"><DollarSign size={11} />{job.ctc_range}</span>}
+              {job.ctc_range && <span className="flex items-center gap-1">₹ {job.ctc_range}</span>}
               {(job.openings_fte ?? 0) > 0 && (
                 <span className="flex items-center gap-1"><Users size={11} />FTE: {job.openings_fte}</span>
               )}

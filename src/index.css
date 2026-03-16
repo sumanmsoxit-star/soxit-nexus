@@ -181,7 +181,7 @@
 
   /* === DIVISION PANELS === */
   .division-panel {
-    @apply relative overflow-hidden rounded-xl p-8 md:p-10 transition-all duration-500 hover:shadow-2xl;
+    @apply relative overflow-hidden rounded-xl p-8 md:p-10 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02];
   }
 
   .division-panel-consulting {

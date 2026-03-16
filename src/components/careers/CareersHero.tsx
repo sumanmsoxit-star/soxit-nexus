@@ -41,7 +41,7 @@ const CareersHero = () => {
             We are hiring across AI, Data, Cybersecurity, Cloud, Engineering and Digital Transformation domains aligned to global capability center (GCC) demand.
           </p>
 
-          <div className="flex flex-wrap gap-4 mt-8">
+          <div className="flex flex-wrap gap-4 mt-8 text-consulting-accent">
             <Button
               onClick={scrollToPositions}
               size="lg"

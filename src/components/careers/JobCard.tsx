@@ -63,7 +63,7 @@ const JobCard = ({ job, index }: JobCardProps) => {
               <span className="flex items-center gap-1"><MapPin size={11} />{job.location}</span>
               <span className="flex items-center gap-1"><Calendar size={11} />{new Date(job.posting_date).toLocaleDateString()}</span>
               {job.experience_range && <span>{job.experience_range}</span>}
-              {job.ctc_range && <span className="flex items-center gap-1"><DollarSign size={11} />{job.ctc_range}</span>}
+              {job.ctc_range && <span className="flex items-center gap-1">₹ {job.ctc_range}</span>}
               {(job.openings_fte ?? 0) > 0 && (
                 <span className="flex items-center gap-1"><Users size={11} />FTE: {job.openings_fte}</span>
               )}
@@ -131,7 +131,7 @@ const JobCard = ({ job, index }: JobCardProps) => {
                     </Link>
                   </Button>
                   {job.status === "open" && (
-                    <Button asChild size="sm" variant="outline" className="gap-1.5 border-consulting-accent text-consulting-accent hover:bg-consulting-accent/10">
+                    <Button asChild size="sm" className="gap-1.5 bg-consulting-accent text-white hover:bg-consulting-accent-hover">
                       <Link to={`/careers/apply/${job.job_post_id.toLowerCase()}`}>
                         Apply Now
                       </Link>

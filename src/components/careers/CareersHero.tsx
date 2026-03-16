@@ -19,15 +19,15 @@ const CareersHero = () => {
       {/* Grid pattern */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
         backgroundImage: "linear-gradient(hsl(var(--consulting-accent)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--consulting-accent)) 1px, transparent 1px)",
-        backgroundSize: "60px 60px",
+        backgroundSize: "60px 60px"
       }} />
 
       <div className="max-w-5xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+          transition={{ duration: 0.6 }}>
+          
           <span className="text-xs font-semibold uppercase tracking-[0.3em] text-consulting-accent mb-4 block">
             Careers at SOXIT
           </span>
@@ -45,17 +45,17 @@ const CareersHero = () => {
             <Button
               onClick={scrollToPositions}
               size="lg"
-              className="btn-consulting gap-2"
-            >
+              className="btn-consulting gap-2">
+              
               View Open Roles <ArrowDown size={16} />
             </Button>
             <Button
               asChild
               size="lg"
               variant="outline"
-              className="border-white/20 text-white hover:bg-white/10"
-            >
-              <a href="#open-positions">
+              className="border-white/20 text-white hover:bg-white/10">
+              
+              <a href="#open-positions" className="text-amber-600">
                 <Send size={16} className="mr-2" /> Apply Now
               </a>
             </Button>
@@ -64,21 +64,21 @@ const CareersHero = () => {
           {/* Stats strip */}
           <div className="flex flex-wrap gap-8 mt-12 pt-8 border-t border-white/10">
             {[
-              { value: "5+", label: "Domains" },
-              { value: "30+", label: "Open Roles" },
-              { value: "6", label: "Locations" },
-              { value: "GCC", label: "Aligned" },
-            ].map((stat) => (
-              <div key={stat.label}>
+            { value: "5+", label: "Domains" },
+            { value: "30+", label: "Open Roles" },
+            { value: "6", label: "Locations" },
+            { value: "GCC", label: "Aligned" }].
+            map((stat) =>
+            <div key={stat.label}>
                 <p className="text-2xl font-bold text-consulting-accent">{stat.value}</p>
                 <p className="text-xs text-white/50 uppercase tracking-wider">{stat.label}</p>
               </div>
-            ))}
+            )}
           </div>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default CareersHero;
